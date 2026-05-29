@@ -1,0 +1,10 @@
+/target/
+**/target/
+app/node_modules/
+app/.next/
+app/.vercel/
+app/tsconfig.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store

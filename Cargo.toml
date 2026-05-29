@@ -1,0 +1,3 @@
+[workspace]
+members = ["contracts/portal-escrow"]
+resolver = "2"
