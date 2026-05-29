@@ -58,9 +58,15 @@ README.md                  project guide
 
 ## Live frontend deployment
 
-Production Vercel URL: https://app-one-iota-92.vercel.app
+The frontend is Vercel-ready from the repository root via `vercel.json` and from `app/` directly. Deploy with:
 
-> Frontend build is live. Set `NEXT_PUBLIC_PORTAL_ESCROW_CONTRACT` in Vercel after deploying with a funded Portaldot account so the live app sends transactions to the final on-chain address. The generated contract metadata is already wired into the app.
+```bash
+VERCEL_TOKEN=your_vercel_token npx vercel@latest --prod --yes --token "$VERCEL_TOKEN"
+```
+
+Set `NEXT_PUBLIC_PORTAL_ESCROW_CONTRACT` in Vercel after deploying with a funded Portaldot account so the live app sends transactions to the final on-chain address. The generated contract metadata is already wired into the app.
+
+> Deployment note: the provided temporary Vercel token was rejected by Vercel CLI as invalid during this handoff, so no new production URL could be created from this environment. The local production build passes and the project is configured for one-command Vercel deployment once a valid token is supplied.
 
 ## Local development
 

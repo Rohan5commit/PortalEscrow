@@ -72,3 +72,13 @@ npx vercel --prod \
   --env NEXT_PUBLIC_PORTALDOT_CHAIN_HINT="Portaldot" \
   --env NEXT_PUBLIC_POT_DECIMALS="14"
 ```
+## Vercel deployment
+
+From the repository root, deploy the Next.js frontend with the committed Vercel configuration:
+
+```bash
+VERCEL_TOKEN=your_vercel_token npx vercel@latest --prod --yes --token "$VERCEL_TOKEN"
+```
+
+The Vercel project should expose the same public environment variables listed above. The app can be deployed before the contract address is available, but live transaction buttons require `NEXT_PUBLIC_PORTAL_ESCROW_CONTRACT` to be set to the deployed ink! contract address.
+
